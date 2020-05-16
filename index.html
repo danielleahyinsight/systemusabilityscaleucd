@@ -366,6 +366,9 @@
 </div>
 </body>
 <script>
+
+    
+
     let saveFile = () => {
 
         var currentdate = new Date(); 
@@ -404,6 +407,66 @@
         'q8: ' + q8 + ',' +
         'q9: ' + q9 + ',' +
         'q10: ' + q10 ;
+
+        if (participantID.value === "") { 
+            alert("participantID is undefined");
+            return;
+        }
+
+        if (typeof q1 === 'undefined') { 
+            alert("Q1 is undefined");
+            return;
+        }
+
+        if (typeof q2 === 'undefined') { 
+            alert("Q2 is undefined");
+            return;
+        }
+
+        if (typeof q3 === 'undefined') { 
+            alert("Q3 is undefined");
+            return;
+        }
+
+        if (typeof q2 === 'undefined') { 
+            alert("Q3 is undefined");
+            return;
+        }
+
+        if (typeof q4 === 'undefined') { 
+            alert("Q4 is undefined");
+            return;
+        }
+
+        if (typeof q5 === 'undefined') { 
+            alert("Q5 is undefined");
+            return;
+        }
+
+        if (typeof q6 === 'undefined') { 
+            alert("Q6 is undefined");
+            return;
+        }
+
+        if (typeof q7 === 'undefined') { 
+            alert("Q7 is undefined");
+            return;
+        }
+
+        if (typeof q8 === 'undefined') { 
+            alert("Q8 is undefined");
+            return;
+        }
+
+        if (typeof q9 === 'undefined') { 
+            alert("Q9 is undefined");
+            return;
+        }
+
+         if (typeof q10 === 'undefined') { 
+            alert("Q10 is undefined");
+            return;
+        }
         
         // Convert the text to BLOB.
         const textToBLOB = new Blob([data], { type: 'text/plain' });

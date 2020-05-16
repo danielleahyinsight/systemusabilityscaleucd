@@ -9,10 +9,14 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- custom CSS -->
+    <link href="css/main.css" rel="stylesheet">
+
 </head>
 <body>
-
-    <div class="jumbotron">
+    <div class="container-fluid h-100">
+     <div class="jumbotron">
       <h1 class="display-4">System Usability Scale</h1>
       <p class="lead">© Digital Equipment Corporation, 1986.</p>
       <hr class="my-4">
@@ -22,46 +26,346 @@
     </p>
 </div>
 
-<div class="container">
-
+<div class="row h-100 justify-content-center align-items-center">
     <form>
-        <div class="form-row">
-            <div class="form-group">
-                <input class="form-control" type="text" id="txtName" placeholder="Participant ID" required>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group">
-                <input class="form-control" type="text" id="txtAge" placeholder="Enter your age" />
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group">
-                <input class="form-control" type="text" id="txtEmail" placeholder="Enter your email address" />
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group">
-                <select id="selCountry" class="form-control">
-                    <option selected value="">-- Choose the country --</option>
-                    <option value="India">India</option>
-                    <option value="Japan">Japan</option>
-                    <option value="USA">USA</option>
-                </select>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group">
-                <textarea class="form-control" id="msg" name="msg" placeholder="Write some message ..." style="height:100px"></textarea>
-            </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <input class="form-control btn-lg btn-primary mb-2" type="button" id="bt" value="Save data to file" onclick="saveFile()" />
-                </div>
-            </div>
-        </form>
+     <div class="form-row">
+       <div class="form-group">        
+           <label class="font-weight-bold" for="participantID">Participant ID</label>
+           <input type="text" class=" form-control" id="participantID" placeholder="participant ID" required>
+       </div> 
+   </div>
 
-    </div>
+
+    <!-- Q1 -->
+   <div class="form-group">
+             <div class="row">
+                <div class="col-md">
+                    <h5>I think that I would like to use this system frequently </h5>
+                </div>
+
+                <div class="col-md">
+                   <div class="form-check form-check-inline">               
+                    <input class="form-check-input" type="radio" name="q1" id="q1r1" value="1" required>
+                    <label class="form-check-label" for="q1r1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q1" id="q1r2" value="2">
+                  <label class="form-check-label" for="q1r2">2</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q1" id="q1r3" value="3">
+                  <label class="form-check-label" for="q1r3">3</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q1" id="q1r4" value="4">
+                  <label class="form-check-label" for="q1r4">4</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q1" id="q1r5" value="5">
+                  <label class="form-check-label" for="q1r5">5</label>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <!-- Q2 -->
+   <div class="form-group">
+             <div class="row">
+                <div class="col-md">
+                    <h5>I found the system unnecessarily complex </h5>
+                </div>
+
+                <div class="col-md">
+                   <div class="form-check form-check-inline">               
+                    <input class="form-check-input" type="radio" name="q2" id="q2r1" value="1" required>
+                    <label class="form-check-label" for="q2r1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q2" id="q2r2" value="2">
+                  <label class="form-check-label" for="q2r2">2</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q2" id="q2r3" value="3">
+                  <label class="form-check-label" for="q2r3">3</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q2" id="q2r4" value="4">
+                  <label class="form-check-label" for="q2r4">4</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q2" id="q2r5" value="5">
+                  <label class="form-check-label" for="q2r5">5</label>
+              </div>
+          </div>
+      </div>
+  </div>
+
+      <!-- Q3 -->
+   <div class="form-group">
+             <div class="row">
+                <div class="col-md">
+                    <h5>I thought the system was easy to use </h5>
+                </div>
+
+                <div class="col-md">
+                   <div class="form-check form-check-inline">               
+                    <input class="form-check-input" type="radio" name="q3" id="q3r1" value="1" required>
+                    <label class="form-check-label" for="q3r1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q3" id="q3r2" value="2">
+                  <label class="form-check-label" for="q3r2">2</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q3" id="q3r3" value="3">
+                  <label class="form-check-label" for="q3r3">3</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q3" id="q3r4" value="4">
+                  <label class="form-check-label" for="q3r4">4</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q3" id="q3r5" value="5">
+                  <label class="form-check-label" for="q3r5">5</label>
+              </div>
+          </div>
+      </div>
+  </div>
+
+       <!-- Q4 -->
+   <div class="form-group">
+             <div class="row">
+                <div class="col-md">
+                    <h5>I think that I would need the support of a technical person to be able to use this system 
+</h5>
+                </div>
+
+                <div class="col-md">
+                   <div class="form-check form-check-inline">               
+                    <input class="form-check-input" type="radio" name="q4" id="q4r1" value="1" required>
+                    <label class="form-check-label" for="q4r1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q4" id="q4r2" value="2">
+                  <label class="form-check-label" for="q4r2">2</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q4" id="q4r3" value="3">
+                  <label class="form-check-label" for="q4r3">3</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q4" id="q4r4" value="4">
+                  <label class="form-check-label" for="q4r4">4</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q4" id="q4r5" value="5">
+                  <label class="form-check-label" for="q4r5">5</label>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+         <!-- Q5 -->
+   <div class="form-group">
+             <div class="row">
+                <div class="col-md">
+                    <h5>I found the various functions in this system were well integrated </h5>
+                </div>
+
+                <div class="col-md">
+                   <div class="form-check form-check-inline">               
+                    <input class="form-check-input" type="radio" name="q5" id="q5r1" value="1" required>
+                    <label class="form-check-label" for="q5r1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q5" id="q5r2" value="2">
+                  <label class="form-check-label" for="q5r2">2</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q5" id="q5r3" value="3">
+                  <label class="form-check-label" for="q5r3">3</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q5" id="q5r4" value="4">
+                  <label class="form-check-label" for="q5r4">4</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q5" id="q5r5" value="5">
+                  <label class="form-check-label" for="q5r5">5</label>
+              </div>
+          </div>
+      </div>
+  </div>
+
+           <!-- Q6 -->
+   <div class="form-group">
+             <div class="row">
+                <div class="col-md">
+                    <h5>I thought there was too much inconsistency in this system</h5>
+                </div>
+                <div class="col-md">
+                   <div class="form-check form-check-inline">               
+                    <input class="form-check-input" type="radio" name="q6" id="q6r1" value="1" required>
+                    <label class="form-check-label" for="q6r1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q6" id="q6r2" value="2">
+                  <label class="form-check-label" for="q6r2">2</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q6" id="q6r3" value="3">
+                  <label class="form-check-label" for="q6r3">3</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q6" id="q6r4" value="4">
+                  <label class="form-check-label" for="q6r4">4</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q6" id="q6r5" value="5">
+                  <label class="form-check-label" for="q6r5">5</label>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+             <!-- Q7 -->
+   <div class="form-group">
+             <div class="row">
+                <div class="col-md">
+                    <h5>I would imagine that most people would learn to use this system very quickly 
+</h5>
+                </div>
+                <div class="col-md">
+                   <div class="form-check form-check-inline">               
+                    <input class="form-check-input" type="radio" name="q7" id="q7r1" value="1" required>
+                    <label class="form-check-label" for="q7r1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q7" id="q7r2" value="2">
+                  <label class="form-check-label" for="q7r2">2</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q7" id="q7r3" value="3">
+                  <label class="form-check-label" for="q7r3">3</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q7" id="q7r4" value="4">
+                  <label class="form-check-label" for="q7r4">4</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q7" id="q7r5" value="5">
+                  <label class="form-check-label" for="q7r5">5</label>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+             <!-- Q8 -->
+   <div class="form-group">
+             <div class="row">
+                <div class="col-md">
+                    <h5>I found the system very cumbersome to use </h5>
+                </div>
+                <div class="col-md">
+                   <div class="form-check form-check-inline">               
+                    <input class="form-check-input" type="radio" name="q8" id="q8r1" value="1" required>
+                    <label class="form-check-label" for="q8r1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q8" id="q8r2" value="2">
+                  <label class="form-check-label" for="q8r2">2</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q8" id="q8r3" value="3">
+                  <label class="form-check-label" for="q8r3">3</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q8" id="q8r4" value="4">
+                  <label class="form-check-label" for="q8r4">4</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q8" id="q8r5" value="5">
+                  <label class="form-check-label" for="q8r5">5</label>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+               <!-- Q9 -->
+   <div class="form-group">
+             <div class="row">
+                <div class="col-md">
+                    <h5>I felt very confident using the system</h5>
+                </div>
+                <div class="col-md">
+                   <div class="form-check form-check-inline">               
+                    <input class="form-check-input" type="radio" name="q9" id="q9r1" value="1" required>
+                    <label class="form-check-label" for="q9r1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q9" id="q9r2" value="2">
+                  <label class="form-check-label" for="q9r2">2</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q9" id="q9r3" value="3">
+                  <label class="form-check-label" for="q9r3">3</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q9" id="q9r4" value="4">
+                  <label class="form-check-label" for="q9r4">4</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q9" id="q9r5" value="5">
+                  <label class="form-check-label" for="q9r5">5</label>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+                 <!-- Q10 -->
+   <div class="form-group">
+             <div class="row">
+                <div class="col-md">
+                    <h5>I needed to learn a lot of things before I could get going with this system</h5>
+                </div>
+                <div class="col-md">
+                   <div class="form-check form-check-inline">               
+                    <input class="form-check-input" type="radio" name="q10" id="q10r1" value="1" required>
+                    <label class="form-check-label" for="q10r1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q10" id="q10r2" value="2">
+                  <label class="form-check-label" for="q10r2">2</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q10" id="q10r3" value="3">
+                  <label class="form-check-label" for="q10r3">3</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q10" id="q10r4" value="4">
+                  <label class="form-check-label" for="q10r4">4</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q10" id="q10r5" value="5">
+                  <label class="form-check-label" for="q10r5">5</label>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+
+
+  <button type="submit" class="btn btn-primary btn-lg float-right ">Save</button>
+</form>
+</div>
+
+</div>
 </body>
 <script>
     let saveFile = () => {
@@ -100,5 +404,7 @@
         newLink.click(); 
     }
 </script>
+
+<!-- bootstrap javascript -->
 <script src="js/bootstrap.bundle.js"></script>
 </html>

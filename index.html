@@ -358,10 +358,8 @@
       </div>
   </div>
 
+  <button type="submit" class="btn btn-primary btn-lg float-right " onclick="saveFile()">Save</button>
 
-
-
-  <button type="submit" class="btn btn-primary btn-lg float-right ">Save</button>
 </form>
 </div>
 
@@ -370,24 +368,46 @@
 <script>
     let saveFile = () => {
 
+        var currentdate = new Date(); 
+        var datetime = currentdate.getDate() + "_"
+                + (currentdate.getMonth()+1)  + "_" 
+                + currentdate.getFullYear() + "_"  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+
+
         // Get the data from each element on the form.
-        const name = document.getElementById('txtName');
-        const age = document.getElementById('txtAge');
-        const email = document.getElementById('txtEmail');
-        const country = document.getElementById('selCountry');
-        const msg = document.getElementById('msg');
+        const participantID = document.getElementById('participantID');
+        const q1 = $('input[name=q1]:checked').val();
+        const q2 = $('input[name=q2]:checked').val();
+        const q3 = $('input[name=q3]:checked').val();
+        const q4 = $('input[name=q4]:checked').val();
+        const q5 = $('input[name=q5]:checked').val();
+        const q6 = $('input[name=q6]:checked').val();
+        const q7 = $('input[name=q7]:checked').val();
+        const q8 = $('input[name=q8]:checked').val();
+        const q9 = $('input[name=q9]:checked').val();
+        const q10 = $('input[name=q10]:checked').val();
+        
         
         // This variable stores all the data.
         let data = 
-        '\r Name: ' + name.value + ' \r\n ' + 
-        'Age: ' +age.value + ' \r\n ' + 
-        'Email: ' + email.value + ' \r\n ' + 
-        'Country: ' + country.value + ' \r\n ' + 
-        'Message: ' + msg.value;
+        'participantID: ' + participantID.value + ',' +  
+        'q1: ' + q1 + ',' +
+        'q2: ' + q2 + ',' +
+        'q3: ' + q3 + ',' +
+        'q4: ' + q4 + ',' +
+        'q5: ' + q5 + ',' +
+        'q6: ' + q6 + ',' +
+        'q7: ' + q7 + ',' +
+        'q8: ' + q8 + ',' +
+        'q9: ' + q9 + ',' +
+        'q10: ' + q10 ;
         
         // Convert the text to BLOB.
         const textToBLOB = new Blob([data], { type: 'text/plain' });
-        const sFileName = 'formData.txt';      // The file to save the data.
+        const sFileName = participantID.value + '_' + datetime;      // The file to save the data.
 
         let newLink = document.createElement("a");
         newLink.download = sFileName;
@@ -405,6 +425,8 @@
     }
 </script>
 
+<!-- JQUERY required for bootstrap js -->
+<script src="js/jquery-3.5.1.min.js"></script>
 <!-- bootstrap javascript -->
 <script src="js/bootstrap.bundle.js"></script>
 </html>

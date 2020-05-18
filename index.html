@@ -381,7 +381,8 @@
 
 
         // Get the data from each element on the form.
-        const participantID = document.getElementById('participantID');
+        // const participantID = document.getElementById('participantID');
+        const participantID = $('#participantID').val();
         const q1 = $('input[name=q1]:checked').val();
         const q2 = $('input[name=q2]:checked').val();
         const q3 = $('input[name=q3]:checked').val();
@@ -396,7 +397,7 @@
         
         // This variable stores all the data.
         let data = 
-        'participantID: ' + participantID.value + ',' +  
+        'participantID: ' + participantID + ',' +  
         'q1: ' + q1 + ',' +
         'q2: ' + q2 + ',' +
         'q3: ' + q3 + ',' +
@@ -408,69 +409,69 @@
         'q9: ' + q9 + ',' +
         'q10: ' + q10 ;
 
-        if (participantID.value === "") { 
-            alert("participantID is undefined");
+        if (participantID === "") { 
+           // alert("participantID is undefined");
             return;
         }
 
         if (typeof q1 === 'undefined') { 
-            alert("Q1 is undefined");
+           // alert("Q1 is undefined");
             return;
         }
 
         if (typeof q2 === 'undefined') { 
-            alert("Q2 is undefined");
+          //  alert("Q2 is undefined");
             return;
         }
 
         if (typeof q3 === 'undefined') { 
-            alert("Q3 is undefined");
+          //  alert("Q3 is undefined");
             return;
         }
 
         if (typeof q2 === 'undefined') { 
-            alert("Q3 is undefined");
+          //  alert("Q3 is undefined");
             return;
         }
 
         if (typeof q4 === 'undefined') { 
-            alert("Q4 is undefined");
+           // alert("Q4 is undefined");
             return;
         }
 
         if (typeof q5 === 'undefined') { 
-            alert("Q5 is undefined");
+          //  alert("Q5 is undefined");
             return;
         }
 
         if (typeof q6 === 'undefined') { 
-            alert("Q6 is undefined");
+          //  alert("Q6 is undefined");
             return;
         }
 
         if (typeof q7 === 'undefined') { 
-            alert("Q7 is undefined");
+        //    alert("Q7 is undefined");
             return;
         }
 
         if (typeof q8 === 'undefined') { 
-            alert("Q8 is undefined");
+        //    alert("Q8 is undefined");
             return;
         }
 
         if (typeof q9 === 'undefined') { 
-            alert("Q9 is undefined");
+          //  alert("Q9 is undefined");
             return;
         }
 
          if (typeof q10 === 'undefined') { 
-            alert("Q10 is undefined");
+          //  alert("Q10 is undefined");
             return;
         }
         
         // Convert the text to BLOB.
         const textToBLOB = new Blob([data], { type: 'text/plain' });
-        const sFileName = participantID.value + '_' + datetime;      // The file to save the data.
+        const sFileName = participantID + '_' + datetime;      // The file to save the data.
 
         let newLink = document.createElement("a");
         newLink.download = sFileName;
